@@ -81,10 +81,10 @@ RAGHAV.Utilities.UrlHelper = (function() {
 		},
 		getCurrentURLPathQueryAndHash: function() {
 			///	<summary>
-			///	Gets the path (relative to the host) + querystring +hash part of current URL.
+			///	Gets the path (relative to the host) + querystring + hash part of current URL.
 			/// Example: '/search?q=demo#test'  from 'http://[www.google.com]:80/search?q=demo#test'
 			///	</summary>
-			///	<returns type="String">The path and querystring of current URL</returns>
+			///	<returns type="String">The path + querystring + hash part of current URL</returns>
 			return window.location.pathname + window.location.search + window.location.hash;
 		},
 		getCurrentURLPort: function() {
