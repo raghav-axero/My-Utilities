@@ -1,6 +1,11 @@
-﻿if (typeof (RAGHAV.Utilities) === undefined || RAGHAV.Utilities === null) { RAGHAV.Utilities = {}; }
+﻿
+if (typeof RAGHAV.Utilities === 'undefined' || !RAGHAV.Utilities) {
+	RAGHAV.Utilities = {};
+}
 
-if (typeof (RAGHAV.Utilities.UrlHelper) === undefined || RAGHAV.Utilities.UrlHelper === null) { RAGHAV.Utilities.UrlHelper = {}; }
+if (typeof (RAGHAV.Utilities.UrlHelper) === 'undefined' || RAGHAV.Utilities.UrlHelper === null) {
+	RAGHAV.Utilities.UrlHelper = {};
+}
 
 
 /*
@@ -16,6 +21,13 @@ if (typeof (RAGHAV.Utilities.UrlHelper) === undefined || RAGHAV.Utilities.UrlHel
 RAGHAV.Utilities.UrlHelper = (function() {
 	'use strict';
 	var my = {
+		changeCurrentURLHash: function(value) {
+			///	<summary>
+			///	Changes that part of current URL that follows the # symbol.
+			///	</summary>
+			///	<param name="value" type="String">The value which is to be set as hash part</param>
+			window.location.hash = value;
+		},
 		encode: function(uri) {
 			///	<summary>
 			///	This function encodes special characters. In addition, it encodes the following characters: , / ? : @ & = + $ #
